@@ -37,7 +37,8 @@
       "editor/context": [
         {
           "command": "tsExportAll.generate",
-          "when": "editorLangId == typescript"
+          "when": "editorLangId == typescript",
+          "group": "navigation@1"
         }
       ]
     },
