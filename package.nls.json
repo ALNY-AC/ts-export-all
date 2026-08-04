@@ -1,0 +1,12 @@
+{
+    "displayName": "TS Export All",
+    "description": "Generate export * statements from current TypeScript folder.",
+    "command.generate": "TS Export All: Generate Exports",
+    "config.title": "TS Export All",
+    "config.indexBehavior.description": "Export behavior when a folder contains index.ts",
+    "config.indexBehavior.skip": "Skip this folder",
+    "config.indexBehavior.index": "Export index.ts",
+    "config.indexBehavior.files": "Export all TypeScript files except index.ts",
+    "config.indexBehavior.all": "Export all TypeScript files including index.ts",
+    "config.includeExtension.description": "Whether export paths include file extensions"
+}

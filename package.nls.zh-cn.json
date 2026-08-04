@@ -1,0 +1,12 @@
+{
+    "displayName": "TS 自动导出",
+    "description": "自动生成当前 TypeScript 目录下所有文件的 export *",
+    "command.generate": "TS Export All：生成目录导出",
+    "config.title": "TS 自动导出",
+    "config.indexBehavior.description": "当文件夹存在 index.ts 时的导出行为",
+    "config.indexBehavior.skip": "跳过这个文件夹",
+    "config.indexBehavior.index": "导出 index.ts（默认）",
+    "config.indexBehavior.files": "导出除 index.ts 外的所有 TypeScript 文件",
+    "config.indexBehavior.all": "导出所有 TypeScript 文件，包括 index.ts",
+    "config.includeExtension.description": "export 路径是否包含文件后缀"
+}

@@ -1,0 +1,94 @@
+{
+  "name": "ts-export-all",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "1.5.0",
+  "publisher": "san-studio",
+  "repository": "https://github.com/ALNY-AC/ts-export-all",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "keywords": [
+    "export",
+    "auto export",
+    "typescript",
+    "javascript",
+    "tsx",
+    "jsx",
+    "developer",
+    "productivity",
+    "intellisense"
+  ],
+  "icon": "images/logo.png",
+  "license": "MIT",
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tsExportAll.generate",
+        "title": "%command.generate%"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "tsExportAll.generate",
+          "when": "editorLangId == typescript"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "%config.title%",
+      "properties": {
+        "tsExportAll.indexBehavior": {
+          "type": "string",
+          "enum": [
+            "skip",
+            "index",
+            "files",
+            "all"
+          ],
+          "enumDescriptions": [
+            "%config.indexBehavior.skip%",
+            "%config.indexBehavior.index%",
+            "%config.indexBehavior.files%",
+            "%config.indexBehavior.all%"
+          ],
+          "default": "index",
+          "description": "%config.indexBehavior.description%"
+        },
+        "tsExportAll.includeExtension": {
+          "type": "boolean",
+          "default": false,
+          "description": "%config.includeExtension.description%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.125.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
