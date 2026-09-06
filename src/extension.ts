@@ -58,7 +58,8 @@ function scanFolder(root: string, current: string, indexBehavior: string, includ
       continue;
     }
 
-    if (hasIndex && indexBehavior === "index") continue;
+    console.log(`🚀 ~ extension.ts:42 ~ scanFolder ~ full:`, full, hasIndex, indexBehavior)
+    if (name == 'index.ts' && indexBehavior === "index") continue;
 
     result.push(toImportPath(root, full, includeExtension));
   }
