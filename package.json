@@ -2,7 +2,7 @@
   "name": "ts-export-all",
   "displayName": "%displayName%",
   "description": "%description%",
-  "version": "1.5.0",
+  "version": "1.7.0",
   "publisher": "san-studio",
   "repository": "https://github.com/ALNY-AC/ts-export-all",
   "engines": {

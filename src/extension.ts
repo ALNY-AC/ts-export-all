@@ -20,7 +20,7 @@ async function generateExport() {
 
   await editor.edit(edit => {
     const range = new vscode.Range(editor.document.positionAt(0), editor.document.positionAt(editor.document.getText().length));
-    edit.replace(range, exports.map(item => `export * from '${item}'`).join("\n"));
+    edit.replace(range, "//!!!本文件自动生成，禁止修改\n" + exports.map(item => `export * from '${item}'`).join("\n"));
   });
 }
 
@@ -58,7 +58,6 @@ function scanFolder(root: string, current: string, indexBehavior: string, includ
       continue;
     }
 
-    console.log(`🚀 ~ extension.ts:42 ~ scanFolder ~ full:`, full, hasIndex, indexBehavior)
     if (name == 'index.ts' && indexBehavior === "index") continue;
 
     result.push(toImportPath(root, full, includeExtension));
